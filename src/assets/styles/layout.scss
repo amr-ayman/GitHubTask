@@ -7,7 +7,7 @@ body {
   min-width: 320px;
   font-family: $font-regular;
   @include normal-screen {
-    overflow-y: hidden;
+    overflow-x: hidden;
   }
 }
 /* Main Layout Styles Start Here */

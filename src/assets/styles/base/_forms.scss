@@ -1,0 +1,17 @@
+@import "variables";
+/* GitHub Form Styles */
+.form-group {
+  .form-control {
+    border: 1px solid $border;
+    &.has-error {
+      border: 1px solid red;
+    }
+  }
+  .error-message {
+    margin-top: 10px;
+    .message {
+      color: red;
+      font-size: 14px;
+    }
+  }
+}

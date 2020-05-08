@@ -1,0 +1,10 @@
+<div class="layout">
+  <ayen-header></ayen-header>
+  <main>
+    <ayen-sidebar></ayen-sidebar>
+    <section>
+      <ayen-page-tabs [pageTabs]="pageTabs" (tabChanged)="tabChanged($event)"></ayen-page-tabs>
+    </section>
+  </main>
+  <ayen-footer></ayen-footer>
+</div>

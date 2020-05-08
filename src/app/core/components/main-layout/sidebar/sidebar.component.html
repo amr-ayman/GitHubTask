@@ -1,0 +1,17 @@
+<aside>
+  <ng-template [ngIf]="userDetails?.name">
+    <div class="user-photo">
+      <img [src]="userDetails.photo" [alt]="userDetails.name" class="user img-fluid">
+    </div>
+    <div class="user-name">
+      <h1 class="name">{{userDetails.name}}</h1>
+      <p class="username">{{userDetails.username}}</p>
+    </div>
+    <div class="user-details">
+      <p class="title">{{userDetails.title}}</p>
+      <p class="company"><i class="icon ayen-people"></i>{{userDetails.company}}</p>
+      <p class="location"><i class="icon ayen-location"></i>{{userDetails.location}}</p>
+      <a [href]="userDetails.website" target="_blank" class="website"><i class="icon ayen-link"></i>{{userDetails.website}}</a>
+    </div>
+  </ng-template>
+</aside>

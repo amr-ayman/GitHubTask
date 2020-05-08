@@ -1,0 +1,34 @@
+@import "variables";
+/* GitHub Buttons Styles */
+.gh-btn {
+  border: none;
+  color: $layout-light;
+  border-radius: 5px;
+  .large {
+    width: 100%;
+  }
+  &.medium {
+    padding: 10px 20px;
+    width: fit-content;
+  }
+  &.apply {
+    background-color: $primary-main;
+    &:hover {
+      background-color: $primary-dark;
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: context-menu;
+    background-color: $typing;
+    &:hover {
+      background-color: $typing;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+/* GitHub Fonts */
+$font-light: 'Segoe UI Light', Helvetica, Arial, sans-serif;
+$font-regular: 'Segoe UI Regular', Helvetica, Arial, sans-serif;
+$font-semi-bold: 'Segoe UI SemiBold', Helvetica, Arial, sans-serif;
+$font-bold: 'Segoe UI Bold', Helvetica, Arial, sans-serif;
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: $font-bold;
+}
+
+p, span {
+  margin: 0;
+  font-family: $font-regular;
+}

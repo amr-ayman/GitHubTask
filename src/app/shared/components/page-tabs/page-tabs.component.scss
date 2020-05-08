@@ -1,0 +1,60 @@
+@import "app";
+/* Page Tabs Styles Start Here */
+.page-tabs {
+  position: relative;
+  .tabs-title {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+  }
+  .nav-tabs {
+    padding: 0;
+    background-color: $white;
+    border-radius: 30px;
+    border: none !important;
+    margin-bottom: 20px;
+    max-width: 100%;
+    overflow-x: scroll;
+    @include normal-screen {
+      overflow-x: hidden;
+    }
+    .tabs-items {
+      border-bottom: 1px solid #eaeaec;
+      @include small-screen {
+        justify-content: unset;
+      }
+      .nav-item {
+        margin-bottom: -1px !important;
+        .nav-link {
+          border: none;
+          display: flex;
+          font-size: 14px;
+          padding: 10px 15px;
+          color: $typing-light;
+          background-color: transparent;
+          &.active {
+            color: $black;
+            font-weight: 700;
+            font-family: $font-bold;
+            border-bottom: 2px solid $highlight;
+          }
+          .count {
+            width: 15px;
+            height: 15px;
+            font-size: 10px;
+            margin-left: 5px;
+            line-height: 15px;
+            text-align: center;
+            border-radius: 50%;
+            color: $typing;
+            display: inline-block;
+            background-color: rgba(27,31,35,.08);
+          }
+        }
+        + .nav-item {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}

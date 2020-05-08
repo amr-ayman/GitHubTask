@@ -1,0 +1,59 @@
+<header>
+  <div class="app-brand large d-none d-lg-block" (click)="goToWelcome()">
+    <div class="logo">
+      <img src="./assets/images/logo/github-small-logo.png" alt="GitHub Logo" class="img-fluid">
+    </div>
+  </div>
+  <div class="menu-toggle d-lg-none" (click)="isMenuOpened = !isMenuOpened">
+    <i [ngClass]="isMenuOpened ? 'ayen-close' : 'ayen-menu'"></i>
+  </div>
+  <nav class="navbar" [class.hide]="!isMenuOpened">
+    <form class="search-form">
+      <input class="form-control" type="search" placeholder="Search or jump to...">
+    </form>
+    <ul class="navbar-nav">
+      <li class="nav-item d-lg-none">
+        <a class="nav-link" href="javascript:">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:">Pull requests</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:">Issues</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:">Market Place</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:">Explore</a>
+      </li>
+      <li class="nav-item d-lg-none">
+        <a class="nav-link" href="javascript:">
+          <img src="./assets/images/logo/github-small-logo.png" alt="GitHub Logo" class="user-photo img-fluid">
+          <span class="user-name">amr-ayman</span>
+        </a>
+      </li>
+      <li class="nav-item d-lg-none">
+        <a class="nav-link" href="javascript:">
+          <i class="ayen-sign-out"></i> Sign out
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="app-brand d-lg-none" (click)="goToWelcome()">
+    <div class="logo">
+      <img src="./assets/images/logo/github-small-logo.png" alt="GitHub Logo" class="img-fluid">
+    </div>
+  </div>
+  <div class="notification"><i class="ayen-bell"></i></div>
+  <div class="add">
+    <i class="ayen-add"></i>
+    <i class="ayen-dropdown"></i>
+  </div>
+  <div class="user">
+    <span class="user-photo">
+      <img [src]="userDetails.photo" [alt]="userDetails.name" class="img-fluid">
+    </span>
+    <i class="ayen-dropdown"></i>
+  </div>
+</header>

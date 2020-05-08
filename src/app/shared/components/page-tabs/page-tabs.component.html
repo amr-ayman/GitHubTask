@@ -1,0 +1,16 @@
+<div class="page-tabs d-flex flex-column flex-grow-1">
+  <ul class="nav nav-tabs">
+    <div class="tabs-items d-flex w-100" >
+      <ng-container *ngFor="let tab of pageTabs; let i = index">
+        <li class="nav-item">
+          <a class="nav-link text-center" href="javascript:" (click)="selectTab(i)" [class.active]="activeTab?.name === tab.name">
+            {{tab.title}}<span *ngIf="i !== 0" class="count" >{{tab.itemCount}}</span>
+          </a>
+        </li>
+      </ng-container>
+    </div>
+  </ul>
+  <div class="tab-content w-100 flex-grow-1">
+    <router-outlet *ngIf="activeTab?.componentUrl"></router-outlet>
+  </div>
+</div>

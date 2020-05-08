@@ -1,0 +1,29 @@
+<div class="welcome-page">
+  <div *ngIf="!isSearchPage" class="app-intro">
+    <div class="app-logo">
+      <img src="./assets/images/logo/github-large-logo.png" alt="GitHub Logo" class="logo">
+    </div>
+    <h3 class="greeting">Hello & Welcome</h3>
+    <p class="description">GitHub App simulates searching in GitHub user repositories.</p>
+    <p class="info">
+      Created as assigned task from Eng. Hassan Shehata <br/> Whose work as Software Engineer at <a href="https://ayen.app/" target="_blank" class="ayen-site">AYEN</a>.
+    </p>
+    <button type="button" class="gh-btn medium apply" (click)="onContinue()">Continue</button>
+  </div>
+  <div *ngIf="isSearchPage" class="user-search">
+    <h3 class="greeting">Hello,</h3>
+    <p class="description">To start using GitHub App, kindly type valid GitHub user</p>
+    <form class="user-form" [formGroup]="userForm" (ngSubmit)="onStart()">
+      <div class="form-group">
+        <input type="text" formControlName="username" class="form-control" placeholder="GitHub User"
+               [class.has-error]="(userForm.controls.username.touched || userForm.controls.username.dirty)
+                  && !userForm.controls.username.valid"/>
+        <div class="error-message" *ngIf="userForm.controls.username.touched && !userForm.controls.username.valid">
+          <span class="message" *ngIf="userForm.controls.username.errors?.required">Username is required</span>
+        </div>
+        <div *ngIf="responseError" class="response-error">Sorry, unable to fetch data for this user, try another one.</div>
+      </div>
+      <button type="submit" class="gh-btn medium apply" [disabled]="!userForm.valid">Start</button>
+    </form>
+  </div>
+</div>

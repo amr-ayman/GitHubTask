@@ -1,0 +1,52 @@
+@import "app";
+/* Footer Styles Start Here */
+footer {
+  padding: 25px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  @include normal-screen {
+    flex-direction: row;
+    padding: 35px 45px;
+  }
+  .left-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .copyrights {
+      font-size: 12px;
+    }
+    @include medium-screen {
+      width: 50%;
+    }
+    @include normal-screen {
+      width: 40%;
+    }
+  }
+  .middle-section {
+    display: none;
+    @include normal-screen {
+      width: 25px;
+      display: block;
+    }
+  }
+  .right-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    @include medium-screen {
+      width: 50%;
+    }
+    @include normal-screen {
+      width: 40%;
+      margin-top: 0;
+    }
+  }
+  .link {
+    font-size: 12px;
+  }
+}

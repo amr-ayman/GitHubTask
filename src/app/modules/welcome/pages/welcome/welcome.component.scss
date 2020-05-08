@@ -1,0 +1,52 @@
+@import "app";
+/* Welcome Page Styles Start Here */
+.welcome-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 15px;
+  background-color: $layout-off-white;
+  .app-intro {
+    max-width: 600px;
+    text-align: center;
+    .app-logo {
+      width: 150px;
+      margin: 0 auto 25px;
+      .logo {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .info {
+      font-size: 14px;
+      margin-bottom: 25px;
+      .ayen-site {
+        color: $layout-dark;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .greeting {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  .description {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .user-search {
+    .user-form {
+      margin-top: 30px;
+      .response-error {
+        color: red;
+        margin-top: 5px;
+        font-size: 14px;
+      }
+    }
+  }
+}

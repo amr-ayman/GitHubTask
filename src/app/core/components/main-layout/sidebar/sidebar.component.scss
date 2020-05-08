@@ -1,0 +1,51 @@
+@import "app";
+/* Sidebar Styles Start Here */
+aside {
+  margin-bottom: 25px;
+  @include medium-screen {
+    height: 100%;
+    margin-bottom: 0;
+    padding-right: 15px;
+  }
+  @include normal-screen {
+    padding-right: 40px;
+  }
+  .user-photo {
+    max-width: 70px;
+    @include medium-screen {
+      max-width: 315px;
+    }
+    .user {
+      border-radius: 3px;
+    }
+  }
+  .user-name {
+    padding: 15px 0 0 8px;
+    .name {
+      font-size: 26px;
+      font-weight: 700;
+    }
+    .username {
+      font-size: 20px;
+    }
+    @include medium-screen {
+      padding: 15px 0;
+    }
+  }
+  .user-details {
+    font-size: 14px;
+    .title {
+      color: $black;
+      margin-bottom: 5px;
+    }
+    .company, .location {
+      color: $typing;
+    }
+    .website {
+      color: $darkblue;
+    }
+    .icon {
+      margin-right: 5px;
+    }
+  }
+}

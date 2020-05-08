@@ -1,0 +1,13 @@
+<div class="repositories-page">
+  <form class="repositories-form" [formGroup]="repositoriesForm">
+    <input type="text" formControlName="search" class="form-control" placeholder="Find a repository..."/>
+  </form>
+  <div class="repositories">
+    <div class="repository" *ngFor="let repository of userRepositories | filter: filterBy:'name'">
+      <a [href]="'https://github.com/' + username + '/' + repository.name" target="_blank" class="title">{{repository.name}}</a>
+      <p *ngIf="repository.description" class="description">{{repository.description}}</p>
+      <span class="lang" [ngClass]="repository.language">{{repository.language}}</span>
+      <span class="date">Updated on {{repository.pushed_at | date: 'MMM dd,yyyy'}}</span>
+    </div>
+  </div>
+</div>

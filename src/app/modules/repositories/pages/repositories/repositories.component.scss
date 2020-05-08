@@ -1,0 +1,72 @@
+@import "app";
+/* Repositories Page Styles Start Here */
+.repositories-page {
+  .repositories-form {
+    .form-control {
+      font-size: 12px;
+      &::-webkit-input-placeholder {
+        color: $gray-medium;
+      }
+      &::-moz-placeholder {
+        color: $gray-medium;
+      }
+      &:-ms-input-placeholder {
+        color: $gray-medium;
+      }
+    }
+  }
+  .repositories {
+    .repository {
+      padding: 25px 0;
+      border-bottom: 1px solid $border;
+      .title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        display: block;
+      }
+      .description {
+        color: $typing;
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+      .lang {
+        font-size: 12px;
+        position: relative;
+        margin-right: 15px;
+        padding-left: 15px;
+        color: $typing-light;
+        display: inline-block;
+        &:after {
+          content: '';
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          display: inline-block;
+          position: absolute;
+          top: 4px;
+          left: 0;
+        }
+        &.CSS {
+          &:after {
+            background-color: $css;
+          }
+        }
+        &.Javascript {
+          &:after {
+            background-color: $javascript;
+          }
+        }
+        &.TypeScript {
+          &:after {
+            background-color: $typescript;
+          }
+        }
+      }
+      .date {
+        font-size: 12px;
+        color: $typing-light;
+      }
+    }
+  }
+}
